@@ -1,0 +1,198 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.api</groupId>
+  <artifactId>GAAF</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<testng.version>7.4.0</testng.version>
+		<assertj.version>3.20.0</assertj.version>
+		<owner.version>1.0.12</owner.version>
+		<log4j.version>2.17.1</log4j.version>
+		<allure.version>2.14.0</allure.version>
+		<allure-maven.version>2.10.0</allure-maven.version>
+		<allure-environment-writer>1.0.0</allure-environment-writer>
+		<aspectj.version>1.9.6</aspectj.version>
+		<rest-assured.version>4.3.0</rest-assured.version>
+		<json-path.version>4.3.0</json-path.version>
+		<xmlpath.version>4.3.0</xmlpath.version>
+		<json>20190722</json>
+		<java-compiler.version>11</java-compiler.version>
+		<WebDriverManager.version>5.3.0</WebDriverManager.version>
+		<selenium.version>3.141.59</selenium.version>
+		<appium.version>7.5.1</appium.version>
+		<google-api-client>2.2.0</google-api-client>
+		<google-oauth-client>1.34.1</google-oauth-client>
+		<google-api-services-sheets>v4-rev614-1.18.0-rc</google-api-services-sheets>
+		<google-http-client-jackson>1.15.0-rc</google-http-client-jackson>
+		<jackson-core>2.9.8</jackson-core>
+		<jackson-databind>2.9.8</jackson-databind>
+		<google-oauth-client-java6>1.15.0-rc</google-oauth-client-java6>
+		<google-oauth-client-jetty>1.22.0</google-oauth-client-jetty>
+		<json-simple>1.1.1</json-simple>
+		<slf4j-api>1.7.5</slf4j-api>
+		<slf4j-log4j12>1.7.5</slf4j-log4j12>
+		<httpclient>4.5.12</httpclient>
+		<httpcore>4.4.4</httpcore>
+		<httpmime>4.5.12</httpmime>
+		<javax.mail-api>1.5.5</javax.mail-api>
+		<javax.mail>1.6.2</javax.mail>
+		<testlink-api-client>2.0</testlink-api-client>
+		<xmlrpc-client>3.1</xmlrpc-client>
+		<commons-logging>1.1</commons-logging>
+		<xmlrpc-common>3.1</xmlrpc-common>
+		<ws-commons-util>1.0.2</ws-commons-util>
+		<poi>3.14</poi>
+		<poi-ooxml>3.14</poi-ooxml>
+		<poi-ooxml-schemas>3.14</poi-ooxml-schemas>
+		<saxon>8.7</saxon>
+		<saxon-dom>8.7</saxon-dom>
+		<Saxon-HE>9.7.0-1</Saxon-HE>
+  		<datafaker.version>1.7.0</datafaker.version>
+        <restassured.version>5.3.0</restassured.version>
+        <junit.jupiter.version>5.9.1</junit.jupiter.version>
+
+	</properties>
+  
+  
+  <dependencies>
+  <dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+	</dependency>
+	
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>${allure.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-attachments</artifactId>
+			<version>${allure.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.automatedowl</groupId>
+			<artifactId>allure-environment-writer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+			<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest-assured.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>${json-path.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/xml-path -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>${xmlpath.version}</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlrpc/xmlrpc-common -->
+		<dependency>
+			<groupId>org.apache.xmlrpc</groupId>
+			<artifactId>xmlrpc-common</artifactId>
+			<version>3.1</version>
+			<exclusions>
+              <exclusion>
+                  <groupId>xml-apis</groupId>
+                  <artifactId>xml-apis</artifactId>
+              </exclusion>
+          </exclusions>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.ws.commons.util/ws-commons-util -->
+		<dependency>
+			<groupId>org.apache.ws.commons.util</groupId>
+			<artifactId>ws-commons-util</artifactId>
+			<version>1.0.2</version>
+			<exclusions>
+              <exclusion>
+                  <groupId>xml-apis</groupId>
+                  <artifactId>xml-apis</artifactId>
+              </exclusion>
+          </exclusions>
+		</dependency>
+  
+  </dependencies>
+  
+  <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+					<configuration>
+						<argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
+						<testFailureIgnore>false</testFailureIgnore>
+						<systemPropertyVariables>
+							<allure.results.directory>allure-results</allure.results.directory>
+
+						</systemPropertyVariables>
+						<suiteXmlFiles>
+							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.aspectj</groupId>
+							<artifactId>aspectjweaver</artifactId>
+							<version>${aspectj.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>io.qameta.allure</groupId>
+					<artifactId>allure-maven</artifactId>
+					<version>${allure-maven.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<configuration>
+						<source>${java-compiler.version}</source>
+						<target>${java-compiler.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+  </build>
+  
+</project>
