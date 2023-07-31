@@ -55,11 +55,21 @@
   		<datafaker.version>1.7.0</datafaker.version>
         <restassured.version>5.3.0</restassured.version>
         <junit.jupiter.version>5.9.1</junit.jupiter.version>
-
+ 		
+		
+		<extent.version>5.0.9</extent.version>
 	</properties>
   
   
   <dependencies>
+  
+  
+  <dependency>
+			<groupId>org.aeonbits.owner</groupId>
+			<artifactId>owner</artifactId>
+			<version>${owner.version}</version>
+		</dependency>
+  
   <dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -146,6 +156,112 @@
           </exclusions>
 		</dependency>
   
+  
+ 
+		  <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+							<dependency>
+		    <groupId>io.github.bonigarcia</groupId>
+		    <artifactId>webdrivermanager</artifactId>
+		    <version>5.4.0</version>
+		</dependency>
+		
+	 
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.13</version> <!-- Use the latest version -->
+</dependency>
+
+ 
+  
+
+ 
+ 	<dependency>
+   		<groupId>io.rest-assured</groupId>
+  		 <artifactId>json-schema-validator</artifactId>
+  		 <version>4.0.0</version>
+	</dependency>
+
+		  
+		  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.10.0</version>
+		</dependency>
+		
+		  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.11.0</version>
+</dependency>
+
+		  
+		  
+		  
+		  
+		  <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>${extent.version}</version>
+			</dependency>
+		  
+		  
+	<dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>javax.mail-api</artifactId>
+        <version>1.6.2</version>
+    </dependency>
+
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.2</version>
+		  </dependency>
+		  
+	 
+		  
+		  
+		  <!-- https://mvnrepository.com/artifact/com.sun.mail/jakarta.mail -->
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>jakarta.mail</artifactId>
+    <version>2.0.1</version>
+</dependency>
+
+
+
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version>
+</dependency>
+
+
+ 
+ <!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/xml-path -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+    
+      <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+	<dependency>
+	    <groupId>io.rest-assured</groupId>
+	    <artifactId>rest-assured</artifactId>
+	    <version>4.3.0</version>
+	</dependency>
+	
+	
   </dependencies>
   
   <build>
